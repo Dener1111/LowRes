@@ -42,9 +42,12 @@ Shader "PostEffect/LowRes"
             fixed4 Frag (v2f i) : SV_Target
             {
                 float2 uv = i.uv;
-                uv *= (_Height, _Width);
-                uv = round(uv);
-                uv /= (_Height, _Width);
+                uv.x *= _Width;
+                uv.y *= _Height;
+                uv.x = round(uv.x);
+                uv.y = round(uv.y);
+                uv.x /= _Width;
+                uv.y /= _Height;
                 fixed4 col = tex2D(_MainTex, uv);
                 return col;
             }
