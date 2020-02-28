@@ -17,6 +17,5 @@ Height - screen height in pixels, width depends on aspect ratio
 
 You done
 
-
 Scene from screenshot
 https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410
